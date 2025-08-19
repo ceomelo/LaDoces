@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Doces | Catálogo</title>
+  <link rel="icon" type="image/png" href="logoguia.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,13 +16,24 @@
           },
           colors: {
             primary: {
-              500: '#f97316',
-              600: '#ea580c'
+              400: '#FF9BB3',  // Rosa claro
+              500: '#FF6B8B',  // Rosa médio
+              600: '#E84363'   // Rosa mais escuro
+            },
+            secondary: {
+              400: '#FFD166',  // Amarelo claro
+              500: '#FFB347',  // Amarelo médio
+              600: '#FF8C42'   // Amarelo mais escuro
+            },
+            accent: {
+              400: '#A2E8C0',  // Verde menta
+              500: '#7DCEA0',  // Verde menta médio
+              600: '#58B27C'   // Verde menta mais escuro
             },
             dark: {
-              900: '#111827',
-              800: '#1f2937',
-              700: '#374151'
+              900: '#1A1A2E',  // Azul escuro
+              800: '#16213E',  // Azul médio
+              700: '#0F3460'   // Azul mais claro
             }
           },
           animation: {
@@ -67,7 +79,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     .preloader-gradient {
-      background: linear-gradient(135deg, #FF9BB3, #FFE08A, #A2E8C0);
+      background: linear-gradient(135deg, #FF9BB3, #FFD166, #A2E8C0);
       background-size: 200% 200%;
     }
     
@@ -76,7 +88,7 @@
     }
     
     .hero-gradient {
-      background: linear-gradient(135deg, rgba(249,115,22,0.15) 0%, rgba(17,24,39,1) 100%);
+      background: linear-gradient(135deg, rgba(255,107,139,0.15) 0%, rgba(26,26,46,1) 100%);
     }
     
     .product-card {
@@ -118,8 +130,8 @@
     }
     
     .category-btn.active {
-      background: linear-gradient(135deg, #f97316, #ef4444);
-      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+      background: linear-gradient(135deg, #FF6B8B, #FF8C42);
+      box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4);
     }
     
     .modal-container {
@@ -132,7 +144,7 @@
     }
     
     .badge-gradient {
-      background: linear-gradient(135deg, #f97316, #ef4444);
+      background: linear-gradient(135deg, #FF6B8B, #FF8C42);
     }
     
     .like-btn {
@@ -180,7 +192,7 @@
     }
     
     .custom-shadow {
-      box-shadow: 0 10px 60px -15px rgba(249, 115, 22, 0.3);
+      box-shadow: 0 10px 60px -15px rgba(255, 107, 139, 0.3);
     }
     
     @media (max-width: 768px) {
@@ -211,10 +223,10 @@
   </div>
 
   <!-- Floating Whatstapp Button -->
-  <a href="https://wa.me/5511953154358?text=Olá%20LTM,%20gostaria%20de%20solicitar%20um%20orçamento" 
-     target="_blank"
-     class="fixed bottom-6 right-6 z-30 bg-gradient-to-br from-green-500 to-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 animate-pulse"
-     aria-label="Contato via WhatsApp">
+  <a href="https://wa.me/5511966162056??text=Olá%20LTM,%20gostaria%20de%20solicitar%20um%20orçamento"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-30 bg-gradient-to-br from-accent-500 to-accent-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 animate-pulse"
+      aria-label="Contato via WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -238,19 +250,19 @@
               </svg>
             </div>
             <div>
-              <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600 tracking-tight">
+              <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-500 tracking-tight">
                 Confira nosso Catálogo
               </h1>
-              <p class="text-sm text-gray-400 mt-1">Comunicação Visual Inteligente para TODO o Brasil.</p>
+              <p class="text-sm text-gray-400 mt-1">Amor em cada pedaço</p>
             </div>
           </div>
-          
+                    
           <p class="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8">
-            
+                        
           </p>
-          
+                    
           <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-            <a href="#products" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
+            <a href="#products" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
               <i class="fas fa-box-open mr-2"></i> Ver Produtos
             </a>
             <a href="https://wa.me/5511966162056?" target="_blank" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
@@ -260,18 +272,19 @@
         </div>
         
         <!-- Hero image -->
-<div class="flex-1 hidden lg:flex justify-center animate-fade-in">
-  <div class="relative w-full max-w-md">
-    <div class="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 filter blur-xl"></div>
-    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 filter blur-xl"></div>
-    <div class="relative bg-gray-800 bg-opacity-50 rounded-2xl p-2 backdrop-filter backdrop-blur-sm border border-gray-700">
-      <img src="fotoinicial.jpg" 
-           alt="Imagem Início La Doces" 
-           class="w-full h-auto rounded-xl shadow-xl">
+        <div class="flex-1 hidden lg:flex justify-center animate-fade-in">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -top-8 -left-8 w-64 h-64 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 filter blur-xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-10 filter blur-xl"></div>
+            <div class="relative bg-gray-800 bg-opacity-50 rounded-2xl p-2 backdrop-filter backdrop-blur-sm border border-gray-700">
+              <img src="fotoinicial.png"
+                    alt="Imagem Início La Doces"
+                    class="w-full h-auto rounded-xl shadow-xl">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
   </header>
 
   <!-- Main Content -->
@@ -284,32 +297,14 @@
             <button onclick="filterByCategory('all')" class="category-btn active px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
               <i class="fas fa-th mr-2"></i> Todos
             </button>
-            <button onclick="filterByCategory('acrilicos')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-square mr-2"></i> Acrílicos
+            <button onclick="filterByCategory('doces')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
+              <i class="fas fa-candy-cane mr-2"></i> Doces Tradicionais e Gourmet
             </button>
-            <button onclick="filterByCategory('cvisual')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-paint-brush mr-2"></i> Comunicação Visual
+            <button onclick="filterByCategory('frutas')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
+              <i class="fas fa-apple-alt mr-2"></i> Frutas com Chocolate
             </button>
-            <button onclick="filterByCategory('claser')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-cut mr-2"></i> Corte a Laser
-            </button>
-            <button onclick="filterByCategory('router')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-cube mr-2"></i> Router CNC
-            </button>
-            <button onclick="filterByCategory('idigital')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-print mr-2"></i> Impressão Digital
-            </button>
-            <button onclick="filterByCategory('marcenaria')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-chair mr-2"></i> Marcenaria
-            </button>
-            <button onclick="filterByCategory('serralheria')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-hammer mr-2"></i> Serralheria
-            </button>
-            <button onclick="filterByCategory('glaser')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-alien mr-2"></i> Gravação a Laser
-            </button>
-            <button onclick="filterByCategory('personalizados')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
-              <i class="fas fa-star mr-2"></i> Personalizados
+            <button onclick="filterByCategory('sobremesas')" class="category-btn px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
+              <i class="fas fa-glass-whiskey mr-2"></i> Sobremesas no Pote
             </button>
           </div>
         </div>
@@ -326,14 +321,14 @@
         <!-- Search bar -->
         <div class="mb-12 max-w-3xl mx-auto animate-fade-in">
           <div class="relative">
-            <input type="text" id="searchInput" 
-                   placeholder="Digite o nome, categoria ou descrição e encontre o que precisa"
+            <input type="text" id="searchInput"
+                    placeholder="Digite o nome, categoria ou descrição e encontre o que precisa"
                    class="w-full px-5 py-3 pr-12 rounded-xl bg-dark-700 border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 outline-none transition-all duration-300 pl-12 placeholder-gray-500 text-white shadow-lg">
             <div class="absolute left-4 top-3.5 text-gray-500 text-lg">
               <i class="fas fa-search"></i>
             </div>
-            <button onclick="clearSearch()" id="clearSearchBtn" 
-                    class="absolute right-4 top-3.5 text-gray-500 hover:text-primary-500 transition-colors hidden">
+            <button onclick="clearSearch()" id="clearSearchBtn"
+                     class="absolute right-4 top-3.5 text-gray-500 hover:text-primary-500 transition-colors hidden">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -346,7 +341,7 @@
               Veja nossos Melhores Produtos
             </span>
           </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">Descubra nossos melhores</p>
+          <p class="text-gray-400 max-w-2xl mx-auto">Descubra nossas delícias artesanais feitas com carinho</p>
         </div>
 
         <!-- Product counter -->
@@ -370,8 +365,8 @@
             </div>
             <h3 class="text-xl font-semibold mb-2">Nenhum produto encontrado</h3>
             <p class="text-gray-400 mb-6">Tente ajustar sua busca ou selecionar outra categoria</p>
-            <button onclick="filterByCategory('all')" 
-                    class="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105">
+            <button onclick="filterByCategory('all')"
+                     class="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-red-500 hover:from-primary-600 hover:to-red-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105">
               Ver todos os produtos
             </button>
           </div>
@@ -385,10 +380,10 @@
         <div class="text-center mb-12">
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-red-500">
-              Por que escolher a LTM?
+              Por que escolher a La Doces?
             </span>
           </h2>
-          <p class="text-gray-400 max-w-3xl mx-auto">Qualidade superior com atendimento feito sob medida.</p>
+          <p class="text-gray-400 max-w-3xl mx-auto">Qualidade superior com ingredientes selecionados e muito carinho.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -396,24 +391,24 @@
             <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
               <i class="fas fa-award feature-icon text-2xl text-white"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Excelência em Qualidade</h3>
-            <p class="text-gray-400">Trabalhamos com materiais de alta qualidade e tecnologia avançada para entregar produtos de excelência.</p>
+            <h3 class="text-xl font-semibold mb-3">Ingredientes Premium</h3>
+            <p class="text-gray-400">Utilizamos apenas os melhores ingredientes, selecionados cuidadosamente para garantir o melhor sabor e qualidade.</p>
+          </div>
+          
+          <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
+            <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+              <i class="fas fa-heart feature-icon text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Feito com Amor</h3>
+            <p class="text-gray-400">Cada doce é preparado artesanalmente com muito carinho e atenção aos detalhes.</p>
           </div>
           
           <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
             <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
               <i class="fas fa-truck feature-icon text-2xl text-white"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Entrega Rápida em Todo o Brasil</h3>
-            <p class="text-gray-400">Processos otimizados que garantem agilidade na produção e entrega dentro do prazo combinado.</p>
-          </div>
-          
-          <div class="feature-card bg-dark-700 p-8 rounded-xl border border-gray-700 hover:border-primary-500/30 transition-all duration-300 group hover:-translate-y-2">
-            <div class="w-16 h-16 mb-6 bg-gradient-to-br from-primary-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-              <i class="fas fa-headset feature-icon text-2xl text-white"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Suporte Especializado</h3>
-            <p class="text-gray-400">Equipe especializada para esclarecer dúvidas e apoiar o desenvolvimento do seu projeto.</p>
+            <h3 class="text-xl font-semibold mb-3">Entrega Rápida</h3>
+            <p class="text-gray-400">Entregamos nossos produtos fresquinhos e no prazo combinado, garantindo a melhor experiência.</p>
           </div>
         </div>
       </div>
@@ -425,7 +420,7 @@
     <div class="flex items-center justify-center min-h-screen">
       <div class="relative bg-dark-800 rounded-2xl shadow-2xl w-full max-w-6xl animate-scale-in overflow-hidden border border-gray-700 modal-content">
         <!-- Close button -->
-        <button onclick="closeModal()" class="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-red-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300">
+        <button onclick="closeModal()" class="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-secondary-600 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300">
           <i class="fas fa-times"></i>
         </button>
         
@@ -456,7 +451,7 @@
               <!-- Thumbnails will be inserted here via JavaScript -->
             </div>
           </div>
-                  
+              
           <!-- Product info -->
           <div class="w-full lg:w-1/2 p-6 lg:p-8">
             <div class="flex justify-between items-start mb-6">
@@ -484,7 +479,7 @@
             
             <div class="mb-8">
               <h3 class="font-semibold text-lg mb-3 flex items-center">
-                <i class="fas fa-info-circle text-primary-500 mr-2"></i> Detalhes técnicos
+                <i class="fas fa-info-circle text-primary-500 mr-2"></i> Detalhes do produto
               </h3>
               <ul id="modalProductDetails" class="text-gray-400 text-sm space-y-3">
                 <!-- Details will be inserted here via JavaScript -->
@@ -513,45 +508,30 @@
                 <path fill="currentColor" d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7L16,11.2V18H15V14H9V18H8V11.2L12,7.7Z" />
               </svg>
             </div>
-            <span class="text-xl font-bold">LTM | Padronizações</span>
+            <span class="text-xl font-bold">La Doces | Catálogo</span>
           </div>
-          <p class="text-gray-400 text-sm mb-6">Design criativo e soluções visuais personalizadas para o seu negócio.</p>
+          <p class="text-gray-400 text-sm mb-6">Delícias artesanais feitas com amor e ingredientes selecionados.</p>
           <div class="flex space-x-4">
-            <a href="https://www.instagram.com/ltm_padronizacoes/" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
+            <a href="https://wa.me/5511966162056?" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/la_doces1603/" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/ltmpadronizacoes" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
-              <i class="fab fa-facebook-f"></i>
-            </a>
           </div>
         </div>
         
         <div>
-          <h3 class="text-lg font-semibold mb-5">• Atalhos Rápidos</h3>
-          <ul class="space-y-3">
-            <li><a href="#" onclick="filterByCategory('acrilicos')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Acrílicos</a></li>
-            <li><a href="#" onclick="filterByCategory('cvisual')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Comunicação Visual</a></li>
-            <li><a href="#" onclick="filterByCategory('claser')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Corte a Laser</a></li>
-            <li><a href="#" onclick="filterByCategory('router')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Router CNC</a></li>
-            <li><a href="#" onclick="filterByCategory('personalizados')" class="text-gray-400 hover:text-primary-500 text-sm transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-primary-500"></i> Produtos Personalizados</a></li>
-          </ul>
-        </div>
-        
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-5">• Contato</h3>
+          <h3 class=""></h3>
           <ul class="space-y-3 text-gray-400 text-sm">
-            <li class="flex items-start"><i class="fas fa-map-marker-alt text-primary-500 mr-3 mt-1"></i> Rua Grã-Bretanha, 360 - Taboão, São Paulo/SP</li>
-            <li class="flex items-start"><i class="fas fa-phone-alt text-primary-500 mr-3 mt-1"></i> (11) 95315-4358</li>
-            <li class="flex items-start"><i class="fas fa-envelope text-primary-500 mr-3 mt-1"></i> contato@lotomix.com.br</li>
-            <li class="flex items-start"><i class="fas fa-clock text-primary-500 mr-3 mt-1"></i> Seg-Sex: 7:00h às 17:45h</li>
+            <li class="flex items-start"><i class=""></i> </li>
           </ul>
         </div>
       </div>
       
       <div class="pt-8 border-t border-gray-800">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2025 | LTM Padronizações | Todos os direitos reservados.</p>
+          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2025 | La Doces | Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
@@ -609,23 +589,65 @@
     const products = [
       {
         id: 1001,
-        name: "Suporte de Celular em Acrílico Premium",
-        description: "Suporte universal para smartphones em acrílico cristal de alta qualidade, perfeito para escritórios e ambientes domésticos. Design moderno e funcional que mantém seu dispositivo seguro e organizado.",
-        category: "acrilicos",
-        price: "R$ 49,90",
+        name: "Brigadeiro Gourmet",
+        description: "Brigadeiro artesanal feito com chocolate belga e leite condensado de qualidade premium. Disponível em diversos sabores e coberturas.",
+        category: "doces",
+        price: "R$ 3,90 unidade",
         images: [
-          "https://acrilicostore.fbitsstatic.net/img/p/suporte-celular-universal-em-acrilico-cristal-70816/257385.jpg",
-          "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VsbHBob25lJTIwc3RhbmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-          "https://images.unsplash.com/photo-1512941937669-90a1b58eaf88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvbmUlMjBzdGFuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+          "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnJpZ2FkZWlyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJpZ2FkZWlyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1589363460779-cd717d2ed8a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJpZ2FkZWlyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
         ],
         details: [
-          "Material: Acrílico cristal 5mm de alta resistência",
-          "Dimensões: 12cm x 9cm x 4cm",
-          "Compatível com todos os smartphones até 7 polegadas",
-          "Base antiderrapante com revestimento em silicone",
-          "Personalização disponível com gravação a laser",
-          "Cores disponíveis: Cristal, Preto, Branco, Vermelho",
-          "Garantia: 6 meses contra defeitos de fabricação"
+          "Ingredientes: Chocolate belga, leite condensado premium, manteiga e coberturas variadas",
+          "Sabores disponíveis: Tradicional, Ninho, Nutella, Doce de Leite, Maracujá",
+          "Coberturas: Granulado, castanhas, coco ralado, confeitos coloridos",
+          "Embalagem individual em papel manteiga ou caixinha decorada",
+          "Prazo de validade: 7 dias refrigerado",
+          "Quantidade mínima: 12 unidades",
+          "Personalização disponível para eventos"
+        ]
+      },
+      {
+        id: 1002,
+        name: "Morango com Chocolate",
+        description: "Morangos frescos mergulhados em chocolate belga derretido, uma combinação perfeita de doce e azedinho.",
+        category: "frutas",
+        price: "R$ 5,90 unidade",
+        images: [
+          "https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyYXdiZXJyeSUyMGFuZCUyMGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RyYXdiZXJyeSUyMGFuZCUyMGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1570145820295-9accf3b8a6d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RyYXdiZXJyeSUyMGFuZCUyMGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        ],
+        details: [
+          "Ingredientes: Morangos frescos selecionados e chocolate belga 70% cacau",
+          "Opções: Chocolate ao leite, branco ou meio amargo",
+          "Coberturas: Granulado, castanhas trituradas, coco ralado",
+          "Embalagem individual em caixinha transparente",
+          "Conservação: Consumir preferencialmente no mesmo dia",
+          "Quantidade mínima: 6 unidades",
+          "Disponível para eventos e presentes especiais"
+        ]
+      },
+      {
+        id: 1003,
+        name: "Pudim de Leite no Pote",
+        description: "Pudim de leite condensado cremoso servido em potes individuais, perfeito para sobremesas práticas e deliciosas.",
+        category: "sobremesas",
+        price: "R$ 8,90 unidade",
+        images: [
+          "https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVkZGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1562440500-13e672f763d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHVkZGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "https://images.unsplash.com/photo-1562440500-13e672f763d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHVkZGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        ],
+        details: [
+          "Ingredientes: Leite condensado, leite integral, ovos e açúcar caramelizado",
+          "Versões: Tradicional, com coco, chocolate ou café",
+          "Pote de vidro com tampa (200ml)",
+          "Prazo de validade: 5 dias refrigerado",
+          "Quantidade mínima: 6 unidades",
+          "Embalagem especial para transporte seguro",
+          "Ótimo para eventos, presentes e sobremesas individuais"
         ]
       }
     ];
@@ -648,8 +670,8 @@
       // Configure likes
       document.querySelectorAll('.like-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-          this.innerHTML = this.innerHTML.includes('far') 
-            ? '<i class="fas fa-heart text-xl text-red-500"></i>'
+          this.innerHTML = this.innerHTML.includes('far')
+             ? '<i class="fas fa-heart text-xl text-red-500"></i>'
             : '<i class="far fa-heart text-xl"></i>';
         });
       });
@@ -794,7 +816,7 @@
       // Update WhatsApp link
       const whatsappButton = document.getElementById('whatsappButton');
       const message = `Olá, gostaria de solicitar um orçamento para o produto ${product.name}`;
-      whatsappButton.href = `https://wa.me/5511953154358?text=${encodeURIComponent(message)}`;
+      whatsappButton.href = `https://wa.me/5511966162056??text=${encodeURIComponent(message)}`;
       
       // Update details
       const detailsList = document.getElementById('modalProductDetails');
@@ -849,7 +871,7 @@
     function changeImage(direction) {
       const product = filteredProducts[currentProductIndex];
       currentImageIndex += direction;
-            
+              
       if (currentImageIndex < 0) {
         currentImageIndex = product.images.length - 1;
       } else if (currentImageIndex >= product.images.length) {
@@ -898,15 +920,9 @@
     // Get category name
     function getCategoryName(category) {
       const categories = {
-        'acrilicos': 'Acrílicos',
-        'cvisual': 'Comunicação Visual',
-        'claser': 'Corte a Laser',
-        'router': 'Router CNC',
-        'idigital': 'Impressão Digital',
-        'marcenaria': 'Marcenaria',
-        'serralheria': 'Serralheria',
-        'glaser': 'Gravação a Laser',
-        'personalizados': 'Personalizados'
+        'doces': 'Doces Tradicionais e Gourmet',
+        'frutas': 'Frutas com Chocolate',
+        'sobremesas': 'Sobremesas no Pote'
       };
       return categories[category] || category;
     }
@@ -936,4 +952,4 @@
     loadProducts();
   </script>
 </body>
-</html>kk
+</html>
