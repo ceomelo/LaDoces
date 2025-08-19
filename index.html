@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Doces | Catálogo</title>
-  <link rel="icon" type="image/png" href="logoguia.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -81,6 +80,40 @@
     .preloader-gradient {
       background: linear-gradient(135deg, #FF9BB3, #FFD166, #A2E8C0);
       background-size: 200% 200%;
+    }
+
+    @media (max-width: 640px) {
+      .hero-content {
+        padding-top: 1.5rem;
+      }
+      .hero-title {
+        font-size: 1.75rem;
+      }
+      .hero-subtitle {
+        font-size: 0.875rem;
+      }
+      .product-card {
+        margin-bottom: 0.75rem;
+      }
+      .modal-content {
+        flex-direction: column;
+      }
+      .modal-image-container {
+        height: 200px !important;
+      }
+      .feature-card {
+        padding: 1rem;
+      }
+      .footer-contact li {
+        font-size: 0.875rem;
+      }
+      .product-description {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+      .product-title {
+        font-size: 1rem;
+      }
     }
     
     .section-gradient {
@@ -223,7 +256,7 @@
   </div>
 
   <!-- Floating Whatstapp Button -->
-  <a href="https://wa.me/5511966162056??text=Olá%20LTM,%20gostaria%20de%20solicitar%20um%20orçamento"
+  <a href="https://wa.me/5511966162056"
       target="_blank"
       class="fixed bottom-6 right-6 z-30 bg-gradient-to-br from-accent-500 to-accent-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 animate-pulse"
       aria-label="Contato via WhatsApp">
@@ -239,7 +272,7 @@
     <div class="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-orange-500 opacity-10 filter blur-3xl"></div>
     <div class="absolute -bottom-40 -right-20 w-96 h-96 rounded-full bg-red-500 opacity-10 filter blur-3xl"></div>
     
-    <div class="container mx-auto px-4 pt-8 pb-12 relative z-10">
+    <div class="container mx-auto px-4 pt-6 pb-8 sm:pt-8 sm:pb-12 relative z-10">
       <div class="flex flex-col lg:flex-row items-center">
         <!-- Logo and title -->
         <div class="flex-1 text-center lg:text-left mb-8 lg:mb-0 animate-fade-in">
@@ -261,11 +294,11 @@
                         
           </p>
                     
-          <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-            <a href="#products" class="px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 w-full sm:w-auto">
+            <a href="#products" class="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center">
               <i class="fas fa-box-open mr-2"></i> Ver Produtos
             </a>
-            <a href="https://wa.me/5511966162056?" target="_blank" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center">
+            <a href="https://wa.me/5511966162056" target="_blank" class="px-4 py-2 sm:px-6 sm:py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center">
               <i class="fas fa-phone-alt mr-2"></i> Fale Conosco
             </a>
           </div>
@@ -290,10 +323,10 @@
   <!-- Main Content -->
   <main class="flex-grow" id="products">
     <!-- Category Filter -->
-    <div class="sticky top-0 z-30 bg-dark-900/95 backdrop-filter backdrop-blur-sm border-b border-gray-800 py-4 px-4">
+    <div class="sticky top-0 z-30 bg-dark-900/95 backdrop-filter backdrop-blur-sm border-b border-gray-800 py-3 px-2 sm:py-4 sm:px-4">
       <div class="container mx-auto">
-        <div class="w-full overflow-x-auto pb-2 scroll-container">
-          <div id="categoryButtons" class="flex flex-nowrap md:flex-wrap gap-3 justify-center px-2">
+        <div class="w-full overflow-x-auto pb-1 sm:pb-2 scroll-container">
+          <div id="categoryButtons" class="flex flex-nowrap md:flex-wrap gap-2 sm:gap-3 justify-start sm:justify-center px-2">
             <button onclick="filterByCategory('all')" class="category-btn active px-5 py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 text-sm font-medium transition-all flex items-center whitespace-nowrap">
               <i class="fas fa-th mr-2"></i> Todos
             </button>
@@ -353,7 +386,7 @@
         </div>
 
         <!-- Product grid -->
-        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           <!-- Products will be inserted here via JavaScript -->
         </div>
 
@@ -428,7 +461,7 @@
         <div class="flex flex-col lg:flex-row">
           <!-- Image gallery -->
           <div class="relative w-full lg:w-1/2 bg-gray-900">
-            <div id="modalImageContainer" class="relative h-64 sm:h-80 lg:h-[500px] overflow-hidden bg-dark-800">
+            <div id="modalImageContainer" class="relative h-64 sm:h-80 lg:h-[500px] overflow-hidden bg-dark-800 modal-image-container">
               <img id="modalImage" src="" alt="" class="w-full h-full object-contain transition-opacity duration-300">
               <div id="imageLoader" class="absolute inset-0 flex items-center justify-center bg-dark-800/80">
                 <div class="w-14 h-14 border-4 border-dark-700 border-t-primary-500 rounded-full animate-spin"></div>
@@ -453,7 +486,7 @@
           </div>
               
           <!-- Product info -->
-          <div class="w-full lg:w-1/2 p-6 lg:p-8">
+          <div class="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 overflow-y-auto max-h-[50vh] sm:max-h-[60vh] lg:max-h-none">
             <div class="flex justify-between items-start mb-6">
               <h2 id="modalProductName" class="text-2xl lg:text-3xl font-bold"></h2>
               <span id="modalProductPrice" class="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-medium hidden"></span>
@@ -486,7 +519,7 @@
               </ul>
             </div>
             
-            <div class="flex space-x-4">
+            <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
               <a id="whatsappButton" href="#" class="flex-1 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center">
                 <i class="fab fa-whatsapp mr-2 text-lg"></i> Solicitar orçamento
               </a>
@@ -498,9 +531,9 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark-900 py-12 border-t border-gray-800">
+  <footer class="bg-dark-900 py-8 sm:py-12 border-t border-gray-800">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-10">
         <div>
           <div class="flex items-center mb-5">
             <div class="w-10 h-10 mr-3 bg-gradient-to-br from-primary-500 to-red-500 rounded flex items-center justify-center">
@@ -512,7 +545,7 @@
           </div>
           <p class="text-gray-400 text-sm mb-6">Delícias artesanais feitas com amor e ingredientes selecionados.</p>
           <div class="flex space-x-4">
-            <a href="https://wa.me/5511966162056?" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
+            <a href="https://wa.me/5511966162056" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
               <i class="fab fa-whatsapp"></i>
             </a>
             <a href="https://www.instagram.com/la_doces1603/" target="_blank" class="w-10 h-10 bg-dark-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors duration-300">
@@ -522,23 +555,24 @@
         </div>
         
         <div>
-          <h3 class=""></h3>
+          <h3 class="text-lg font-semibold mb-5">• Contato</h3>
           <ul class="space-y-3 text-gray-400 text-sm">
-            <li class="flex items-start"><i class=""></i> </li>
+            <li class="flex items-start"><i class="fas fa-phone-alt text-primary-500 mr-3 mt-1"></i> (11) 96616-2056</li>
+            <li class="flex items-start"><i class="fas fa-envelope text-primary-500 mr-3 mt-1"></i> ladoces1603@gmail.com</li>
           </ul>
         </div>
       </div>
       
       <div class="pt-8 border-t border-gray-800">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2025 | La Doces | Todos os direitos reservados.</p>
+          <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2025 | <strong>La Doces</strong> | Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-20 right-6 z-30 bg-dark-700 text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 shadow-lg hover:bg-primary-500">
+  <button id="backToTop" class="fixed bottom-20 right-6 z-30 bg-dark-700 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 shadow-lg hover:bg-primary-500">
     <i class="fas fa-arrow-up"></i>
   </button>
 
@@ -816,7 +850,7 @@
       // Update WhatsApp link
       const whatsappButton = document.getElementById('whatsappButton');
       const message = `Olá, gostaria de solicitar um orçamento para o produto ${product.name}`;
-      whatsappButton.href = `https://wa.me/5511966162056??text=${encodeURIComponent(message)}`;
+      whatsappButton.href = `https://wa.me/5511966162056text=${encodeURIComponent(message)}`;
       
       // Update details
       const detailsList = document.getElementById('modalProductDetails');
